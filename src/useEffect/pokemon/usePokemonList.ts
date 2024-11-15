@@ -1,15 +1,9 @@
 import { useEffect, useState } from 'react';
-
-interface Pokemon {
-	name: string;
-	url: string;
-}
-interface PokeApiResponse {
-	results: Pokemon[];
-}
+import { Pokemon } from './pokemon.model';
+import { pokemonAdapter } from './pokemon.adapter';
 
 export default function usePokemonList() {
-	const [pokemonList, setPokemonList] = useState<Pokemon[]>();
+	const [pokemonDetail, setPokemonDetail] = useState<Pokemon>();
 	const [error, setError] = useState<null | string>(null);
 	const [loading, setLoading] = useState(false);
 
@@ -20,13 +14,17 @@ export default function usePokemonList() {
 		const callPokemon = async () => {
 			try {
 				setLoading(true);
-				const fetchingData = await fetch('https://pokeapi.co/api/v2/pokemon', {
-					signal,
-				});
+				const fetchingData = await fetch(
+					'https://pokeapi.co/api/v2/pokemon/1',
+					{
+						signal,
+					}
+				);
 				if (!fetchingData.ok) throw new Error('Failed to fetch data');
 
-				const res: PokeApiResponse = await fetchingData.json();
-				setPokemonList(res.results);
+				const result = await fetchingData.json();
+				const dataAdapter = pokemonAdapter(result);
+				setPokemonDetail(dataAdapter);
 			} catch (error) {
 				if (error instanceof Error) {
 					setError(error.message);
@@ -44,5 +42,5 @@ export default function usePokemonList() {
 			controller.abort();
 		};
 	}, []);
-	return { pokemonList, error, loading };
+	return { pokemonDetail, error, loading };
 }

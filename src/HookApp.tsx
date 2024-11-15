@@ -1,16 +1,15 @@
-// import CounterComponent from './useState/CounterComponent';
-// import PokemonListComponent from "./useEffect/PokemonListComponent";
-// import CleanupComponent from './useEffect/CleanupComponent';
-
-import FormWithCustomHook from './useEffect/form/FormWithCustomHook';
+//import Counter from './useState/Counter';
+import Pokemon from './useEffect/pokemon/Pokemon';
+// import Cleanup from './useEffect/cleanup/Cleanup';
+// import FormWithCustomHook from './useEffect/form/FormWithCustomHook';
 
 export default function HookApp() {
 	return (
 		<>
-			{/* <CounterComponent /> */}
-			{/* <PokemonListComponent /> */}
-			{/* <CleanupComponent/> */}
+			{/* <Counter />
 			<FormWithCustomHook />
+			<Cleanup /> */}
+			<Pokemon />
 		</>
 	);
 }
