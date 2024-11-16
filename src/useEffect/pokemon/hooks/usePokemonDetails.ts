@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Pokemon } from './pokemon.model';
-import { pokemonAdapter } from './pokemon.adapter';
+import { Pokemon } from '../models/pokemon.model';
+import { pokemonAdapter } from '../adapters/pokemon.adapter';
 
-export default function usePokemonList() {
+export default function usePokemonDetails(count: number) {
 	const [pokemonDetail, setPokemonDetail] = useState<Pokemon>();
 	const [error, setError] = useState<null | string>(null);
 	const [loading, setLoading] = useState(false);
@@ -15,7 +15,7 @@ export default function usePokemonList() {
 			try {
 				setLoading(true);
 				const fetchingData = await fetch(
-					'https://pokeapi.co/api/v2/pokemon/1',
+					`https://pokeapi.co/api/v2/pokemon/${count}`,
 					{
 						signal,
 					}
@@ -41,6 +41,6 @@ export default function usePokemonList() {
 		return () => {
 			controller.abort();
 		};
-	}, []);
+	}, [count]);
 	return { pokemonDetail, error, loading };
 }

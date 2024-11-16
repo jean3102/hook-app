@@ -1,12 +1,12 @@
-import { PokemonDetailsProps } from './pokemon.model';
-
+import { PokemonDetailsProps } from './models/pokemon.model';
+import './styles/pokemon-details.styles.css'
 export default function PokemonDetails({
 	pokemonDetails,
 }: PokemonDetailsProps) {
-	const { name, sprites } = pokemonDetails;
+	const { id,name, sprites } = pokemonDetails;
 	return (
-		<section>
-			<h2>{name}</h2>
+		<section className='details'>
+			<h2>#{id} - {name}</h2>
 			<ul>
 				<li>
 					<img

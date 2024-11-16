@@ -1,10 +1,15 @@
 export interface Pokemon {
+	id: number;
 	name: string;
 	sprites: Sprites;
 }
 
 export interface PokemonDetailsProps {
 	pokemonDetails: Pokemon;
+}
+export interface PokemonCounterProps {
+	previousCounter: () => void;
+	nextCounter: () => void;
 }
 
 interface Sprites {

@@ -1,10 +1,12 @@
 import PokemonCounter from './PokemonCounter';
 import PokemonDetail from './PokemonDetails';
-import usePokemonList from './usePokemonList';
+import usePokemonDetails from './hooks/usePokemonDetails';
+import usePokemonCounter from './hooks/usePokemonCounter';
+import './styles/pokemon.styles.css';
 
 export default function Pokemon() {
-	const { pokemonDetail, loading, error } = usePokemonList();
-	console.log(`🚀 ------------ pokemonList:`, pokemonDetail);
+	const { count, nextCounter, previousCounter } = usePokemonCounter();
+	const { pokemonDetail, loading, error } = usePokemonDetails(count);
 
 	if (loading) {
 		return <h1>Loading...</h1>;
@@ -15,13 +17,16 @@ export default function Pokemon() {
 	}
 
 	return (
-		<>
+		<section className="container">
 			{pokemonDetail ? (
 				<PokemonDetail pokemonDetails={pokemonDetail} />
 			) : (
 				'Data not found'
 			)}
-			<PokemonCounter />
-		</>
+			<PokemonCounter
+				previousCounter={previousCounter}
+				nextCounter={nextCounter}
+			/>
+		</section>
 	);
 }

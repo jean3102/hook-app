@@ -1,7 +1,8 @@
-import { Pokemon } from './pokemon.model';
+import { Pokemon } from '../models/pokemon.model';
 
 export const pokemonAdapter = (data: Pokemon) => {
 	return {
+		id: data.id,
 		name: data.name,
 		sprites: {
 			front_shiny: data.sprites.front_shiny,

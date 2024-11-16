@@ -1,0 +1,9 @@
+.details {
+	ul {
+		display: flex;
+		list-style: none;
+		justify-content: center;
+		gap: 1em;
+        height: 100px;
+	}
+}
