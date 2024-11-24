@@ -1,6 +1,10 @@
 export interface PokemonDetailsProps {
 	pokemon: PokemonModel;
 }
+export interface PokemonCounterProps {
+	previousCounter: () => void;
+	nextCounter: () => void;
+}
 
 export interface PokemonModel {
 	id: number;

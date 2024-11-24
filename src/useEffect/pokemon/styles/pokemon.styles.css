@@ -1,0 +1,10 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	background-color: rebeccapurple;
+	border-radius: 2em;
+	width: 800px;
+	height: 260px;
+	text-transform: capitalize;
+}
