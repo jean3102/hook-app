@@ -11,7 +11,7 @@ export default function Pokemon() {
 
 	return (
 		<section className='container'>
-			{pokemon ? <PokemonDetails pokemon={pokemon} /> : ''}
+			{pokemon ? <PokemonDetails pokemon={pokemon} /> : 'Data not found'}
 			<PokemonPagination
 				handleNext={handleNext}
 				handlePrevious={handlePrevious}
