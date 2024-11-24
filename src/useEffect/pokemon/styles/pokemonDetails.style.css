@@ -1,0 +1,15 @@
+.detail {
+	display: flex;
+	flex-direction: column;
+	width: 450px;
+	height: 250px;
+	ul {
+		display: flex;
+		list-style: none;
+		gap: 1em;
+		li{
+			background-color: rgba(246, 246, 246, 0.758);
+			border-radius: 1em;
+		}
+	}
+}
