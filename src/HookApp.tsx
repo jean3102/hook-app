@@ -2,8 +2,9 @@
 // import Pokemon from './useEffect/pokemon/Pokemon';
 // import Cleanup from './useEffect/cleanup/Cleanup';
 // import FormWithCustomHook from './useEffect/form/FormWithCustomHook';
+// import FocusScreen from './useRef/FocusScreen';
 
-import FocusScreen from "./useRef/FocusScreen";
+import LayoutEffectExample from './useLayoutEffect/LayoutEffectExample';
 
 export default function HookApp() {
 	return (
@@ -11,8 +12,10 @@ export default function HookApp() {
 			{/* <Counter />
 			<FormWithCustomHook />
 			<Cleanup /> */
-			/* <Pokemon /> */}
+			/* <Pokemon />
 			<FocusScreen/>
+			 */}
+			<LayoutEffectExample />
 		</>
 	);
 }
