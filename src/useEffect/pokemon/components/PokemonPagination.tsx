@@ -4,7 +4,6 @@ export default function PokemonPagination({
 	handleNext,
 	handlePrevious,
 }: PokemonPaginationModelProps) {
-	console.log('PokemonPagination')
 	return (
 		<section className='pagination'>
 			<button onClick={handlePrevious}>Previous</button>
