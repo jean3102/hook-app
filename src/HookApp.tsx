@@ -4,20 +4,23 @@
 // import FormWithCustomHook from './useEffect/form/FormWithCustomHook';
 // import FocusScreen from './useRef/FocusScreen';
 // import LayoutEffectExample from './useLayoutEffect/LayoutEffectExample';
+// import MemoExample from './memo/MemoExample';
 
-import MemoExample from './memo/MemoExample';
+import UseMemoExample from './useMemo/UseMemoExample';
 
 export default function HookApp() {
 	return (
 		<>
 			{/* <Counter />
 			<FormWithCustomHook />
-			<Cleanup /> */
-			/* <Pokemon />
+			<Cleanup />
+			<Pokemon />
 			<FocusScreen/>
 			<LayoutEffectExample />
+			<MemoExample/>
 			 */}
-			 <MemoExample/>
+			 <UseMemoExample/>
+
 		</>
 	);
 }
