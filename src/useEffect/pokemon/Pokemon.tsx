@@ -1,6 +1,6 @@
 import { usePokemon } from './hooks/usePokemon';
-import PokemonDetails from './components/PokemonDetails';
-import PokemonPagination from './components/PokemonPagination';
+import {PokemonDetails} from './components/PokemonDetails';
+import {PokemonPagination} from './components/PokemonPagination';
 import './styles/pokemon.style.css';
 
 export default function Pokemon() {

@@ -1,6 +1,6 @@
 //import Counter from './useState/Counter';
-import CallBackHook from './useCallBack/CallBackHook';
-// import Pokemon from './useEffect/pokemon/Pokemon';
+// import CallBackHook from './useCallBack/CallBackHook';
+import Pokemon from './useEffect/pokemon/Pokemon';
 // import Cleanup from './useEffect/cleanup/Cleanup';
 // import FormWithCustomHook from './useEffect/form/FormWithCustomHook';
 // import FocusScreen from './useRef/FocusScreen';
@@ -19,9 +19,9 @@ export default function HookApp() {
 			<LayoutEffectExample />
 			<MemoExample/>
 			<UseMemoExample/>
-			<Pokemon />
-			*/}
 			<CallBackHook />
+			*/}
+			<Pokemon />
 		</>
 	);
 }

@@ -1,9 +1,11 @@
+import { memo } from 'react';
 import { PokemonDetailsProps } from '../models/pokemon.model';
 import '../styles/pokemonDetails.style.css';
-export default function PokemonDetails({ pokemon }: PokemonDetailsProps) {
+export const PokemonDetails = memo(({ pokemon }: PokemonDetailsProps) => {
 	const { id, name, sprites } = pokemon;
+
 	return (
-		<section className='detail'>
+		<section className="detail">
 			<h2>
 				{id} - {name}
 			</h2>
@@ -35,4 +37,4 @@ export default function PokemonDetails({ pokemon }: PokemonDetailsProps) {
 			</ul>
 		</section>
 	);
-}
+});
