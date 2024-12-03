@@ -1,27 +1,26 @@
-//import Counter from './useState/Counter';
-// import CallBackHook from './useCallBack/CallBackHook';
-import Pokemon from './useEffect/pokemon/Pokemon';
-// import Cleanup from './useEffect/cleanup/Cleanup';
-// import FormWithCustomHook from './useEffect/form/FormWithCustomHook';
-// import FocusScreen from './useRef/FocusScreen';
-// import LayoutEffectExample from './useLayoutEffect/LayoutEffectExample';
-// import MemoExample from './memo/MemoExample';
 
-// import UseMemoExample from './useMemo/UseMemoExample';
+
+// import MemoExample from "./memo/MemoExample";
+// import CallBackHook from "./memo/useCallBack/CallBackHook";
+// import UseMemoExample from "./memo/useMemo/UseMemoExample";
+// import Cleanup from "./useEffect/cleanup/Cleanup";
+// import FormWithCustomHook from "./useEffect/form/FormWithCustomHook";
+// import Pokemon from "./useEffect/pokemon/Pokemon";
+// import LayoutEffectExample from "./useLayoutEffect/LayoutEffectExample";
+// import FocusScreen from "./useRef/FocusScreen";
+
 
 export default function HookApp() {
 	return (
 		<>
-			{/* <Counter />
-			<FormWithCustomHook />
+			{/* <FormWithCustomHook />
 			<Cleanup />
 			<FocusScreen/>
 			<LayoutEffectExample />
 			<MemoExample/>
 			<UseMemoExample/>
-			<CallBackHook />
-			*/}
 			<Pokemon />
+			<CallBackHook /> */}
 		</>
 	);
 }
