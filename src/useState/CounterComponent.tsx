@@ -5,18 +5,9 @@ export default function CounterComponent() {
 	return (
 		<div>
 			<h2>{counter}</h2>
-			<button
-				onClick={() => subtractCounter(1)}>
-				1-
-			</button>
-			<button
-				onClick={resetCounter}>
-				Reset
-			</button>
-			<button
-				onClick={() => addCounter(1)}>
-				1+
-			</button>
+			<button onClick={() => subtractCounter(1)}>1-</button>
+			<button onClick={resetCounter}>Reset</button>
+			<button onClick={() => addCounter(1)}>1+</button>
 		</div>
 	);
 }

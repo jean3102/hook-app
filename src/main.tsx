@@ -1,10 +1,18 @@
-// import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import HookApp from './HookApp.tsx';
+import { BrowserRouter, Route, Routes } from 'react-router';
+import { routes } from './routes';
 
 createRoot(document.getElementById('root')!).render(
-	// <StrictMode>
-		<HookApp />
-	// </StrictMode>
+	<BrowserRouter>
+		<Routes>
+			{routes.map(({ path, element }, index) => (
+				<Route
+					key={index}
+					path={path}
+					element={element}
+				/>
+			))}
+		</Routes>
+	</BrowserRouter>
 );

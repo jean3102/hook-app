@@ -1,34 +1,41 @@
 import { useEffect, useState } from 'react';
 
 export default function Cleanup() {
-	const [coords, setCoords] = useState({ x: 0, y: 0 });
-	const [input, setInput] = useState('');
-
-	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		const { value } = event.target;
-		setInput(value);
-	};
+	const [count, setCount] = useState(0);
+	const [isRunning, setIsRunning] = useState(true);
 
 	useEffect(() => {
-		const onMouseMove = ({ x, y }: MouseEvent) => {
-			setCoords({ x, y });
-		};
+		if (!isRunning) return; // Skip setting up the timer if not running
 
-		window.addEventListener('mousemove', onMouseMove);
+		const interval = setInterval(() => {
+			setCount((prevCount) => prevCount + 1);
+		}, 1000);
 
+		// Cleanup function
 		return () => {
-			window.removeEventListener('mousemove', onMouseMove);
+			clearInterval(interval); // Clear timer
+			console.log('Timer cleaned up!');
 		};
-	}, [input]);
-	return (
-		<>
-			<input
-				type="text"
-				onChange={handleChange}
-				value={input}
-			/>
+	}, [isRunning]);
 
-			{JSON.stringify(coords)}
-		</>
+	const handleStop = () => setIsRunning(false);
+	const handleStart = () => setIsRunning(true);
+
+	return (
+		<div>
+			<h1>Count: {count}</h1>
+			<div>
+				<button
+					onClick={handleStop}
+					disabled={!isRunning}>
+					Stop Timer
+				</button>
+				<button
+					onClick={handleStart}
+					disabled={isRunning}>
+					Start Timer
+				</button>
+			</div>
+		</div>
 	);
 }

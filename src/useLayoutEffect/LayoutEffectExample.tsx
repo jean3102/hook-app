@@ -1,8 +1,7 @@
 import useLayoutEffectExample from './hooks/useLayoutEffectExample';
 import './styles/layoutEffectExample.style.css';
 export default function LayoutEffectExample() {
-	const { backGround, boxRef, boxSize, dynamicHeight, updateHeight } =
-		useLayoutEffectExample();
+	const { backGround, boxRef, boxSize, dynamicHeight, updateHeight } = useLayoutEffectExample();
 
 	return (
 		<section
