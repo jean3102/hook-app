@@ -9,6 +9,8 @@
 // import LayoutEffectExample from "./useLayoutEffect/LayoutEffectExample";
 // import FocusScreen from "./useRef/FocusScreen";
 
+import { Father } from "./memo/exampleMemo/Father";
+
 
 export default function HookApp() {
 	return (
@@ -21,6 +23,7 @@ export default function HookApp() {
 			<UseMemoExample/>
 			<Pokemon />
 			<CallBackHook /> */}
+			<Father/>
 		</>
 	);
 }
