@@ -5,3 +5,8 @@
 	height: 100vh;
 	gap: 1em;
 }
+
+* {
+	margin: 0px;
+	padding: 0px;
+}

@@ -1,5 +1,5 @@
-import { Link } from 'react-router';
-
+import { useNavigate } from 'react-router';
+import './component.style.css';
 interface ComponentListProps {
 	listExample: {
 		path: string;
@@ -8,11 +8,14 @@ interface ComponentListProps {
 }
 
 export const ComponentList = ({ listExample }: ComponentListProps) => {
+	const navigation = useNavigate();
 	return (
-		<ul>
+		<ul className="componentList">
 			{listExample.map(({ path, description }) => (
-				<li key={path}>
-					<Link to={path}>{description}</Link>
+				<li
+					key={path}
+					onClick={() => navigation(path)}>
+					<p>{description}</p>
 				</li>
 			))}
 		</ul>

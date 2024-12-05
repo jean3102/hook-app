@@ -1,0 +1,32 @@
+.componentList {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	list-style-type: none;
+	flex-wrap: wrap;
+	li {
+        /* padding-top: 1em; */
+		border-radius: 20px;
+		text-align: center;
+        height: 170px;
+		width: 170px;
+		background-color: rgb(80, 75, 75);
+		box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+        rgba(0, 0, 0, 0.23) 0px 6px 6px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		p {
+            margin: 5px;
+			font-size: 1.2em;
+		}
+	}
+
+	li:hover {
+		font-size: 16px;
+		font-weight: 600;
+		color: #fff;
+		background-size: 300% 100%;
+	}
+}
