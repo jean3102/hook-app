@@ -11,6 +11,8 @@ import UseMemoExample from './memo/useMemo/UseMemoExample.tsx';
 import CallBackHook from './memo/useCallBack/CallBackHook.tsx';
 import { Father } from './memo/exampleMemo/Father.tsx';
 import MemoComponents from './memo/MemoComponents.tsx';
+import UseReducerComponent from './useReducer/UseReducerComponent.tsx';
+import CounterReducer from './useReducer/Counter/CounterReducer.tsx';
 
 export const routes = [
 	{ path: '/', element: <HookApp /> },
@@ -24,6 +26,8 @@ export const routes = [
 	{ path: '/use-effect-example/pokemon-list', element: <Pokemon /> },
 	{ path: '/layout-effect', element: <LayoutEffectExample /> },
 	{ path: '/useRef', element: <FocusScreen /> },
+	{ path: '/useReducer', element: <UseReducerComponent /> },
+	{ path: '/useReducer/counter-reducer', element: <CounterReducer /> },
 	{ path: '/react-memo', element: <MemoComponents /> },
 	{ path: '/react-memo/memo', element: <MemoExample /> },
 	{ path: '/react-memo/use-memo', element: <UseMemoExample /> },

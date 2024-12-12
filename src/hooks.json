@@ -18,5 +18,9 @@
     {
         "path": "react-memo",
         "description": "memo"
+    },
+    {
+        "path": "useReducer",
+        "description": "useReducer"
     }
 ]
