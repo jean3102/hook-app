@@ -1,6 +1,6 @@
 [
     {
-        "path": "counter-component",
+        "path": "useState",
         "description": "useState"
     },
     {

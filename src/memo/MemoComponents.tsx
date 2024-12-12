@@ -1,6 +1,11 @@
 import { ComponentList } from '../Components/ComponentList';
 
-import listExample from './example.json' 
+import listExample from './example.json';
 export default function MemoComponents() {
-	return <ComponentList listExample={listExample} />;
+	return (
+		<>
+			<h1>Example with memorize</h1>
+			<ComponentList listExample={listExample} />
+		</>
+	);
 }

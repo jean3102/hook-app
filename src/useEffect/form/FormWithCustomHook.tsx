@@ -17,26 +17,29 @@ export default function FormWithCustomHook() {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input
-				type="email"
-				name="email"
-				onChange={handleChange}
-				value={email}
-			/>
-			<input
-				type="password"
-				name="password"
-				onChange={handleChange}
-				value={password}
-				autoComplete="on"
-			/>
-			<button type="submit">Sign In</button>
-			<button
-				type="button"
-				onClick={resetForm}>
-				Reset
-			</button>
-		</form>
+		<>
+			<h1>Form</h1>
+			<form onSubmit={handleSubmit}>
+				<input
+					type="email"
+					name="email"
+					onChange={handleChange}
+					value={email}
+				/>
+				<input
+					type="password"
+					name="password"
+					onChange={handleChange}
+					value={password}
+					autoComplete="on"
+				/>
+				<button type="submit">Sign In</button>
+				<button
+					type="button"
+					onClick={resetForm}>
+					Reset
+				</button>
+			</form>
+		</>
 	);
 }

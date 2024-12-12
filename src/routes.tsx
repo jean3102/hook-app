@@ -14,7 +14,7 @@ import MemoComponents from './memo/MemoComponents.tsx';
 
 export const routes = [
 	{ path: '/', element: <HookApp /> },
-	{ path: '/counter-component', element: <CounterComponent /> },
+	{ path: '/useState', element: <CounterComponent /> },
 	{ path: '/use-effect-example', element: <UseEffectExample /> },
 	{
 		path: '/use-effect-example/form-with-custom-hook',
