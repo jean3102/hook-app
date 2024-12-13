@@ -1,0 +1,23 @@
+.taskList {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(245, 245, 220, 0.303);
+	padding: 1em;
+	/* height: 300px; */
+	overflow-y: auto;
+
+	flex-wrap: wrap;
+	li {
+		display: flex;
+		justify-content: space-between;
+		gap: 1em;
+		align-items: center;
+		width: 350px;
+		border-bottom: 1px solid gray;
+		padding: 5px;
+		u {
+			text-decoration: line-through;
+			opacity: 0.6;
+		}
+	}
+}
