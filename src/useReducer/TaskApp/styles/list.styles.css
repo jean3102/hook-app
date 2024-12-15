@@ -1,23 +1,26 @@
 .taskList {
-	display: flex;
-	flex-direction: column;
 	background-color: rgba(245, 245, 220, 0.303);
 	padding: 1em;
-	/* height: 300px; */
-	overflow-y: auto;
-
-	flex-wrap: wrap;
-	li {
-		display: flex;
-		justify-content: space-between;
-		gap: 1em;
-		align-items: center;
-		width: 350px;
-		border-bottom: 1px solid gray;
-		padding: 5px;
-		u {
-			text-decoration: line-through;
-			opacity: 0.6;
+	ul {
+		overflow-y: auto;
+		width: 380px;
+		height: 300px;
+		padding-bottom: 1em;
+		flex-wrap: wrap;
+		li {
+			display: flex;
+			justify-content: space-between;
+			border-bottom: 1px solid gray;
+			gap: 1em;
+			align-items: center;
+			padding: 5px;
+			u {
+				text-decoration: line-through;
+				opacity: 0.6;
+			}
+			button {
+				font-size: 0.6em;
+			}
 		}
 	}
 }

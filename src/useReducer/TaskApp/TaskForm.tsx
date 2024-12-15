@@ -1,12 +1,43 @@
+import React, { useEffect, useRef, useState } from 'react';
 import './styles/taskForm.styles.css';
-export default function TaskForm() {
+
+interface TaskFormProps {
+	handleAddTask: (text: string) => void;
+}
+export default function TaskForm({ handleAddTask }: TaskFormProps) {
+	const [task, setTask] = useState('');
+	const taskRef = useRef<HTMLInputElement>(null);
+
+	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+		const { value } = event.target;
+		setTask(value.trim());
+	};
+
+	const handleSubmit = (event: React.FocusEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		if (task !== '') {
+			handleAddTask(task);
+			setTask('');
+		} else {
+			taskRef.current?.focus();
+		}
+	};
+	useEffect(() => {
+		taskRef.current?.focus();
+	}, []);
+
 	return (
-		<form className='taskForm'>
+		<form
+			onSubmit={handleSubmit}
+			className="taskForm">
 			<input
+				ref={taskRef}
 				type="text"
+				value={task}
 				placeholder="What do you need to do?"
+				onChange={handleChange}
 			/>
-			<button>Add</button>
+			<button type="submit">Create</button>
 			<button>Clear Complete</button>
 		</form>
 	);
