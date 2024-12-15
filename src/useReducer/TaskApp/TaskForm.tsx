@@ -37,8 +37,8 @@ export default function TaskForm({ handleAddTask }: TaskFormProps) {
 				placeholder="What do you need to do?"
 				onChange={handleChange}
 			/>
-			<button type="submit">Create</button>
-			<button>Clear Complete</button>
+			<button type="submit">Add</button>
+			<button>Clear</button>
 		</form>
 	);
 }
