@@ -10,13 +10,13 @@ export default function TaskForm({ handleAddTask }: TaskFormProps) {
 
 	const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 		const { value } = event.target;
-		setTask(value.trim());
+		setTask(value);
 	};
 
 	const handleSubmit = (event: React.FocusEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		if (task !== '') {
-			handleAddTask(task);
+		if (task.trim() !== '') {
+			handleAddTask(task.trim());
 			setTask('');
 		} else {
 			taskRef.current?.focus();
