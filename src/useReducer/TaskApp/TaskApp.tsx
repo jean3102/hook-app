@@ -3,7 +3,7 @@ import TaskForm from './TaskForm';
 import useTaskReducer from './hooks/useTaskReducer';
 
 export default function TaskApp() {
-	const { addTask, completeTask, taskList, error } = useTaskReducer();
+	const { addTask,deleteTask ,completeTask, taskList, error } = useTaskReducer();
 
 	const handleAddTask = (text: string) => {
 		addTask(text);
@@ -17,6 +17,7 @@ export default function TaskApp() {
 				<List
 					list={taskList}
 					completeTask={completeTask}
+					deleteTask={deleteTask}
 				/>
 			)}
 		</>

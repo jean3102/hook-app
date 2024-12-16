@@ -1,6 +1,10 @@
 import { useReducer, useState } from 'react';
 import { Task, TaskAction } from '../models/task.model';
-import { handleAddTask, handleCompleteTask } from '../helpers/handleTask';
+import {
+	handleAddTask,
+	handleCompleteTask,
+	handleDeleteTask,
+} from '../helpers/handleTask';
 
 export default function useTaskReducer() {
 	const [error, setError] = useState<null | string>(null);
@@ -12,13 +16,11 @@ export default function useTaskReducer() {
 			case 'complete':
 				return handleCompleteTask(state, action.payload.id);
 			case 'delete':
-				return [];
+				return handleDeleteTask(state, action.payload.id);
 		}
 	};
 
-
 	const [state, dispatch] = useReducer(handleTaskReducer, []);
-	console.log(`🚀 ------------ state:`, state)
 
 	const addTask = (description: string) => {
 		const taskExist = state.some(
@@ -33,5 +35,9 @@ export default function useTaskReducer() {
 		dispatch({ type: 'complete', payload: { id: id } });
 	};
 
-	return { taskList: state, addTask, completeTask, error };
+	const deleteTask = (id: number) => {
+		dispatch({ type: 'delete', payload: { id: id } });
+	};
+
+	return { taskList: state, addTask, deleteTask, completeTask, error };
 }

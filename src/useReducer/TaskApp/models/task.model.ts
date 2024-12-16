@@ -1,5 +1,6 @@
 export interface ListModel {
 	list: Task[];
+	deleteTask: (id: number) => void;
 	completeTask: (id: number) => void;
 }
 

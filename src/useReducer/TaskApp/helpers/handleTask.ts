@@ -15,8 +15,9 @@ export const handleCompleteTask = (state: Task[], id: number) => {
 	const updatedState = state.map((task) =>
 		task.id === id ? { ...task, completed: !task.completed } : task
 	);
-
-	console.log(`🚀 ------------ findTask:`, updatedState);
-
 	return updatedState;
+};
+
+export const handleDeleteTask = (state: Task[], id: number) => {
+	return state.filter((task) => task.id !== id);
 };
