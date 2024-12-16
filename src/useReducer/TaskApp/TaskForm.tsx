@@ -22,6 +22,8 @@ export default function TaskForm({ handleAddTask }: TaskFormProps) {
 			taskRef.current?.focus();
 		}
 	};
+
+	const clearForm = () => setTask('');
 	useEffect(() => {
 		taskRef.current?.focus();
 	}, []);
@@ -38,7 +40,7 @@ export default function TaskForm({ handleAddTask }: TaskFormProps) {
 				onChange={handleChange}
 			/>
 			<button type="submit">Add</button>
-			<button>Clear</button>
+			<button onClick={clearForm}>Clear</button>
 		</form>
 	);
 }
