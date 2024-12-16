@@ -1,5 +1,6 @@
 export interface ListModel {
 	list: Task[];
+	completeTask: (id: number) => void;
 }
 
 export interface Task {
@@ -7,7 +8,6 @@ export interface Task {
 	description: string;
 	completed: boolean;
 }
-
 
 export type TaskAction =
 	| { type: 'create'; payload: { description: string } }

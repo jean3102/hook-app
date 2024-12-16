@@ -10,11 +10,15 @@ export default function TaskApp() {
 	};
 	return (
 		<>
-			<button onClick={() => completeTask(1)}>complete</button>
 			<h1>Task App</h1>
 			<TaskForm handleAddTask={handleAddTask} />
 			{error && <span>{error}</span>}
-			{taskList.length > 0 && <List list={taskList} />}
+			{taskList.length > 0 && (
+				<List
+					list={taskList}
+					completeTask={completeTask}
+				/>
+			)}
 		</>
 	);
 }

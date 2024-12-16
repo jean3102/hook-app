@@ -18,6 +18,7 @@ export default function useTaskReducer() {
 
 
 	const [state, dispatch] = useReducer(handleTaskReducer, []);
+	console.log(`🚀 ------------ state:`, state)
 
 	const addTask = (description: string) => {
 		const taskExist = state.some(

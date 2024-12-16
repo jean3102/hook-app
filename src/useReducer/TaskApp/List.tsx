@@ -1,6 +1,7 @@
 import { ListModel } from './models/task.model';
 import './styles/list.styles.css';
-export default function List({ list }: ListModel) {
+export default function List({ list, completeTask }: ListModel) {
+	console.log(`🚀 ------------ list:`, list);
 	const sortedList = [...list].sort((a, b) => b.id - a.id);
 	return (
 		<section className="taskList">
@@ -10,8 +11,9 @@ export default function List({ list }: ListModel) {
 						<input
 							type="checkbox"
 							checked={completed}
+							onChange={() => completeTask(id)}
 						/>
-						{completed ? <u>description</u> : <p>{description}</p>}
+						{completed ? <u>{description}</u> : <p>{description}</p>}
 						<button>Delete</button>
 					</li>
 				))}

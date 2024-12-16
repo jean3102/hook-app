@@ -12,8 +12,11 @@ export const handleAddTask = (state: Task[], description: string) => {
 };
 
 export const handleCompleteTask = (state: Task[], id: number) => {
-	const findTask = state.filter((task) =>
-		task.id === id ? { ...state, completed: !task.completed } : state
+	const updatedState = state.map((task) =>
+		task.id === id ? { ...task, completed: !task.completed } : task
 	);
-	return findTask;
+
+	console.log(`🚀 ------------ findTask:`, updatedState);
+
+	return updatedState;
 };
