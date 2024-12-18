@@ -14,10 +14,12 @@ export default function List({ list, deleteTask, completeTask }: ListModel) {
 							onChange={() => completeTask(id)}
 						/>
 						{completed ? (
-							<u>{description}</u>
+							<u>
+								<span>{description}</span> <span>{date}</span>
+							</u>
 						) : (
 							<p>
-								{description} <span>{date}</span>
+								<span>{description}</span> <span>{date}</span>
 							</p>
 						)}
 						<button onClick={() => deleteTask(id)}>Delete</button>

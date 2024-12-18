@@ -1,12 +1,13 @@
 .taskList {
 	background-color: rgba(245, 245, 220, 0.303);
 	padding: 1em;
+	border-radius: 10px;
 	ul {
 		overflow-y: auto;
-		width: 380px;
+		width: 600px;
 		height: 300px;
 		padding-bottom: 1em;
-		flex-wrap: wrap;
+
 		li {
 			display: flex;
 			justify-content: space-between;
@@ -18,8 +19,33 @@
 				text-decoration: line-through;
 				opacity: 0.6;
 			}
+			p,
+			u {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+			}
 			button {
 				font-size: 0.6em;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.taskList ul {
+		width: 370px;
+		height: auto;
+
+		li {
+			width: 360px;
+			word-break: break-word;
+			p,
+			u {
+				gap: 1em;
+			}
+			button {
+				width: 110px;
 			}
 		}
 	}
