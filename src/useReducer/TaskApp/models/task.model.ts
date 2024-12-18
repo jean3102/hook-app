@@ -6,6 +6,7 @@ export interface ListModel {
 
 export interface Task {
 	id: number;
+	date?: string;
 	description: string;
 	completed: boolean;
 }

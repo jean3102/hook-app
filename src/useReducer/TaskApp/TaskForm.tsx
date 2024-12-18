@@ -36,7 +36,7 @@ export default function TaskForm({ handleAddTask }: TaskFormProps) {
 				ref={taskRef}
 				type="text"
 				value={task}
-				maxLength={32}
+				maxLength={30}
 				placeholder="What do you need to do?"
 				onChange={handleChange}
 			/>
