@@ -8,6 +8,7 @@ import {
 
 export default function useTaskReducer() {
 	const [error, setError] = useState<null | string>(null);
+	const [filter, setFilter] = useState('all');
 	const handleTaskReducer = (state: Task[], action: TaskAction): Task[] => {
 		setError('');
 		switch (action.type) {
@@ -39,5 +40,19 @@ export default function useTaskReducer() {
 		dispatch({ type: 'delete', payload: { id: id } });
 	};
 
-	return { taskList: state, addTask, deleteTask, completeTask, error };
+	const filteredTasks = () => {
+		if (filter === 'completed') return state.filter((task) => task.completed);
+		if (filter === 'pending') return state.filter((task) => !task.completed);
+
+		return state;
+	};
+
+	return {
+		taskList: filteredTasks(),
+		addTask,
+		deleteTask,
+		completeTask,
+		error,
+		setFilter,
+	};
 }
