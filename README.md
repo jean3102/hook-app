@@ -89,7 +89,7 @@ For more details, visit the [React documentation](https://reactjs.org/docs/hooks
 To get started with the project, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/jean3102/Rick-Morty.git
+git clone https://github.com/jean3102/hook-app.git
 cd hook-app
 npm install
 ```
