@@ -81,3 +81,20 @@ Each React hook serves a specific purpose:
 - **Performance Optimization**: `useCallback`, `useMemo`, `memo`
 
 For more details, visit the [React documentation](https://reactjs.org/docs/hooks-intro.html).
+
+---
+
+## Getting Started
+
+To get started with the project, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/jean3102/Rick-Morty.git
+cd hook-app
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
