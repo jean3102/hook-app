@@ -14,6 +14,7 @@ import MemoComponents from './memo/MemoComponents.tsx';
 import UseReducerComponent from './useReducer/UseReducerComponent.tsx';
 import CounterReducer from './useReducer/Counter/CounterReducer.tsx';
 import TaskApp from './useReducer/TaskApp/TaskApp.tsx';
+import MainApp from './useContext/MainApp.tsx';
 
 export const routes = [
 	{ path: '/', element: <HookApp /> },
@@ -35,4 +36,5 @@ export const routes = [
 	{ path: '/react-memo/use-memo', element: <UseMemoExample /> },
 	{ path: '/react-memo/use-callback', element: <CallBackHook /> },
 	{ path: '/react-memo/example-memo', element: <Father /> },
+	{ path: '/useContext/', element: <MainApp /> },
 ];
