@@ -1,3 +1,13 @@
+import { useAuthContext } from './hooks/useAuthContext';
+import NavBar from './NavBar';
+
 export default function MainApp() {
-	return <div>MainApp</div>;
+	const { user } = useAuthContext();
+	console.log(`🚀 ------------ user:`, user);
+	return (
+		<>
+			<NavBar />
+			MainApp
+		</>
+	);
 }

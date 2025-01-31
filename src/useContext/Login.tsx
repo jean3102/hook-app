@@ -1,3 +1,8 @@
+import { useAuthContext } from './hooks/useAuthContext';
+
 export default function Login() {
-	return <div>login</div>;
+	const { login } = useAuthContext();
+	return (
+			<button onClick={login}>Login </button>
+	);
 }

@@ -20,11 +20,11 @@
         "description": "memo"
     },
     {
-        "path": "useReducer",
+        "path": "use-reducer",
         "description": "useReducer"
     },
     {
-        "path": "useContext",
+        "path": "use-context",
         "description": "useContext"
     }
 ]

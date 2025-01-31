@@ -15,6 +15,10 @@ import UseReducerComponent from './useReducer/UseReducerComponent.tsx';
 import CounterReducer from './useReducer/Counter/CounterReducer.tsx';
 import TaskApp from './useReducer/TaskApp/TaskApp.tsx';
 import MainApp from './useContext/MainApp.tsx';
+import { AuthProvider } from './useContext/provider/AuthProvider.tsx';
+import Login from './useContext/Login.tsx';
+import { Routes, Route } from 'react-router';
+import UserProfile from './useContext/UserProfile .tsx';
 
 export const routes = [
 	{ path: '/', element: <HookApp /> },
@@ -28,13 +32,33 @@ export const routes = [
 	{ path: '/use-effect-example/pokemon-list', element: <Pokemon /> },
 	{ path: '/layout-effect', element: <LayoutEffectExample /> },
 	{ path: '/useRef', element: <FocusScreen /> },
-	{ path: '/useReducer', element: <UseReducerComponent /> },
-	{ path: '/useReducer/counter-reducer', element: <CounterReducer /> },
-	{ path: '/useReducer/task-app', element: <TaskApp /> },
+	{ path: '/use-reducer', element: <UseReducerComponent /> },
+	{ path: '/use-reducer/counter-reducer', element: <CounterReducer /> },
+	{ path: '/use-reducer/task-app', element: <TaskApp /> },
 	{ path: '/react-memo', element: <MemoComponents /> },
 	{ path: '/react-memo/memo', element: <MemoExample /> },
 	{ path: '/react-memo/use-memo', element: <UseMemoExample /> },
 	{ path: '/react-memo/use-callback', element: <CallBackHook /> },
 	{ path: '/react-memo/example-memo', element: <Father /> },
-	{ path: '/useContext/', element: <MainApp /> },
+	{
+		path: '/use-context/*',
+		element: (
+			<AuthProvider>
+				<Routes>
+					<Route
+						path="/"
+						element={<MainApp />}
+					/>
+					<Route
+						path="login"
+						element={<Login />}
+					/>
+					<Route
+						path="user-profile"
+						element={<UserProfile />}
+					/>
+				</Routes>
+			</AuthProvider>
+		),
+	},
 ];
