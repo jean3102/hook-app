@@ -1,6 +1,6 @@
 export interface AuthContextModel {
 	isLoggedIn: boolean;
-	login: () => void;
+	login: (email: string, password: string) => void;
 	logout: () => void;
 	user: User | null;
 }
