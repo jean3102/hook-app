@@ -1,15 +1,19 @@
 import { useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import { AuthProviderModel, User } from '../models/authContext.model';
+import {
+	AuthProviderModel,
+	LoginModel,
+	User,
+} from '../models/authContext.model';
 import { useNavigate } from 'react-router';
 
 export const AuthProvider = ({ children }: AuthProviderModel) => {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
 	const [user, setUser] = useState<User | null>(null);
 	const navigate = useNavigate();
-	const login = () => {
+	const login = ({ fullName, email }: LoginModel) => {
 		console.log('login');
-		setUser({ id: 1, name: 'John Doe', email: 'jeancarlos3102@gmail.com' });
+		setUser({ id: 1, name: fullName, email: email });
 		setIsLoggedIn(true);
 		navigate('/use-context/user-profile');
 	};
