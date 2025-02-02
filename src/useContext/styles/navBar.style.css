@@ -1,0 +1,15 @@
+.nav-bar {
+	list-style: none;
+	li {
+		a {
+			text-decoration: none;
+			color: white;
+			padding: 10px;
+            background-color: rgb(23, 97, 233);
+			&:hover {
+				background-color: black;
+			}
+		}
+	}
+    
+}

@@ -13,6 +13,7 @@ React provides a powerful set of hooks to manage state, side effects, references
 6. [`useCallback`](#6-usecallback)
 7. [`useMemo`](#7-usememo)
 8. [`memo`](#8-memo)
+9. [`useContext`](#9-usecontext)
 
 ---
 
@@ -72,6 +73,13 @@ React provides a powerful set of hooks to manage state, side effects, references
 
 ---
 
+## 9. `useContext`
+
+<a name="9-usecontext"></a>
+[`useContext`](https://react.dev/reference/react/useContext) allows you to access the value of a context directly in a functional component. It is useful for consuming context values without needing to wrap components in a context consumer.
+
+---
+
 ## Summary
 
 Each React hook serves a specific purpose:
@@ -79,6 +87,7 @@ Each React hook serves a specific purpose:
 - **Side Effects**: `useEffect`, `useLayoutEffect`
 - **References**: `useRef`
 - **Performance Optimization**: `useCallback`, `useMemo`, `memo`
+- **Context Consumption**: `useContext`
 
 For more details, visit the [React documentation](https://reactjs.org/docs/hooks-intro.html).
 
