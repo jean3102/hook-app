@@ -1,13 +1,11 @@
 import { Link } from 'react-router';
 import { useAuthContext } from './hooks/useAuthContext';
-
+import './styles/navBar.style.css';
 export default function NavBar() {
-	const { isLoggedIn, user, logout } = useAuthContext();
-	console.log(`🚀 ------------ user:`, user);
-	console.log(`🚀 ------------ isLoggedIn:`, isLoggedIn);
+	const { isLoggedIn, logout } = useAuthContext();
 
 	return (
-		<ul>
+		<ul className='nav-bar'>
 			{!isLoggedIn ? (
 				<li>
 					<Link to="login">login</Link>
