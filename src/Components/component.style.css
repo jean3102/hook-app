@@ -5,7 +5,6 @@
 	list-style-type: none;
 	flex-wrap: wrap;
 	li {
-        /* padding-top: 1em; */
 		border-radius: 20px;
 		text-align: center;
         height: 170px;
